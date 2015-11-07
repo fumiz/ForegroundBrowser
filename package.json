@@ -1,0 +1,8 @@
+{
+  "name"    : "ForegroundBrowser",
+  "version" : "0.1.0",
+  "main"    : "src/app.js",
+  "dependencies": {
+    "vue":          "1.0.4"
+  }
+}

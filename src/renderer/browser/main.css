@@ -1,0 +1,48 @@
+html{
+    width:100%;
+    height:100%;
+}
+
+body{
+    margin:0;padding:0;
+    height:100%;
+}
+
+#app{
+    width: 100%;
+    height: 100%;
+}
+
+div.menu {
+    width:100%;
+    padding:5px;
+    background-color: white;
+    color: black;
+    white-space: nowrap;
+    height: 33px;
+}
+
+input.address {
+    width: 50%;
+}
+
+.browser-container {
+    height: 100%;
+}
+
+.browser {
+    display: inline-block; width:100%; height:100%
+}
+
+.ready {
+    color: black;
+}
+
+.disabled {
+    color: darkgray;
+}
+
+.loading {
+    background-size: contain;
+    background: url(../shared/images/spinner.gif) no-repeat right;
+}

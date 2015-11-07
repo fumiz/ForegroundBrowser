@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>browser</title>
+    <link rel="stylesheet" href="../shared/vendor/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="app">
+    <div class="menu">
+        <button v-bind:class="canGoBackClass" v-on:click.prevent="back">&lt;-</button>
+        <button v-bind:class="canGoForwardClass" v-on:click.prevent="forward">-&gt;</button>
+        <button v-on:click.prevent="reload">Reload</button>
+        <input type="text" v-on:keyup.enter="load" v-model="currentUrlText" v-bind:class="{ 'loading': loading }"
+               class="address">
+        <button v-on:click.prevent="load">Load</button>
+        <button v-on:click.prevent="stick"><span v-bind:class="{ 'disabled': !sticky }">&#10003</span> Stick</button>
+        <button v-on:click.prevent="devTool">DevTool</button>
+    </div>
+    <div class="browser-container">
+        <webview class="browser" src="about:blank"></webview>
+    </div>
+</div>
+<script>
+    window.jQuery = window.$ = require('../shared/vendor/jquery-2.1.4.min.js');
+</script>
+<script src="../shared/vendor/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
